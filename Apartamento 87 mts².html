@@ -1,0 +1,387 @@
+<!--
+    Museo Parque Central - Constructora Cusezar
+    Recorrido virtual apartamento de 87 mts
+
+    NO MODIFIQUE ESTE CÓDIGO
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>87mts²</title>
+</head>
+<style>
+    /**
+    *
+    * Configuración de etiquetas con CSS
+    */
+    .contenedor {
+        /*
+        * 
+        * Configuración de etiquetas tipo <div>
+        */
+        position: relative;
+        width: 100%;
+    }
+
+    .imgVista {
+        /*
+        * 
+        * Configuración de etiquetas tipo <img>
+        */
+        display: block;
+        margin: 0 auto;
+        /* Diseño de respuesta */
+        width: 60%;
+        height: auto;
+    }
+
+    .inputLayOut {
+        /*
+        * 
+        * Configuración de etiquetas tipo <input>
+        */
+        position: absolute;
+        padding: 12px 24px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #e20613;
+        color: white;
+        font-family: Tahoma;
+        font-size: 16px;
+        text-align: center;
+        visibility: hidden;
+    }
+
+    body {
+        /*
+        *
+        * Configuración de etiquetas tipo <body>
+        */
+        background-color: #e20613;
+    }
+</style>
+<script type="text/javascript">
+
+    // Variables con las imágenes del apartamento
+
+    var link_hall1 = "https://drive.google.com/uc?export=view&id=" + "1uBPmEQ47QaJMCCu8bDqM9oXA62bl3TeV";
+    var link_hall2 = "https://drive.google.com/uc?export=view&id=" + "17yptMJM7s4g8sbB0GL3XrQ8ylRAh65wk";
+    var link_social1 = "https://drive.google.com/uc?export=view&id=" + "1ni67TpCgUyv8PYeI7LCP-fE32h51TBrp";
+    var link_social2 = "https://drive.google.com/uc?export=view&id=" + "1IrSIoExs3IUd3QyZ3J_JI2SEm_q_sH78";
+    var link_social3 = "https://drive.google.com/uc?export=view&id=" + "1RF3mkIQ8tvNMdt9uTtV1ZpRclkI-uXtV";
+    var link_cocina1 = "https://drive.google.com/uc?export=view&id=" + "16daZL0tAOAb_f4-5moXNAxQJE_bRotkM";
+    var link_alc_aux1 = "https://drive.google.com/uc?export=view&id=" + "1wznJhHiKxo-Z1k9RgDuRZL5hyI_W1U80";
+    var link_alc_aux2 = "https://drive.google.com/uc?export=view&id=" + "1XExQscagGfAZ8qhJQirmcb8iyozA1ev8";
+    var link_alc_aux3 = "https://drive.google.com/uc?export=view&id=" + "1yPVeBCcIeF4p_0y6b8T52Atg1EQbOxqq";
+    var link_alc_prin1 = "https://drive.google.com/uc?export=view&id=" + "1W0RZml9Wiwi5ZH_N3JIN7L-mq1OodHf5";
+    var link_alc_prin2 = "https://drive.google.com/uc?export=view&id=" + "14ipZaYKcQ2u-go7EZ7BdnZmOKVRRrv0A";
+    var link_alc_prin3 = "https://drive.google.com/uc?export=view&id=" + "1-fz1P1FDxSM_b3LhLQ3JbNtiF3ocAVuS";
+    var link_blc1 = "https://drive.google.com/uc?export=view&id=" + "1YJD6Q13DDn8eiOwrNKl28ylAZY1CwGCm";
+    var link_blc2 = "https://drive.google.com/uc?export=view&id=" + "1LSIU3see0CpqRCBKXX6NNclvUmMz_VQK";
+
+    // Variable de control de pasos
+
+    var paso = 0;
+
+    /**
+     * 
+     * Función "interactuar()"
+     * 
+     * Modifica el valor de la variable "paso", para
+     * posteriormente, cargar una vista especificada
+     * 
+     * @param {string} Director -> Recibe como parámetro un 
+     * String, que permite identificar a los 
+     * elementos html
+     * 
+     * @return void -> No devuelve acción alguna
+     */
+    function interactuar(director) {
+        switch (director) {
+
+            // Se agregan estructuras condicionales deacuerdo al flujo de pasos
+
+            case 'i': paso++;
+                ocultarBoton("boton_inicio");
+                mostrarBoton("boton_retroceder");
+                break;
+            case 'a':
+                switch (paso) {
+                    case 2: paso--;
+                        break;
+                    case 3: paso--;
+                        break;
+                    case 5: paso = 2;
+                        break;
+                    case 6: paso = 4;
+                        break;
+                    case 7: paso--;
+                        break;
+                    case 10: paso = 8;
+                        break;
+                    case 12: paso = 8;
+                        break;
+                    case 11: paso--;
+                        break;
+                    case 14: paso--;
+                        break;
+                    default: paso++;
+                        break;
+                }
+                break;
+            case 'b':
+                switch (paso) {
+                    case 1: paso = 8;
+                        break;
+                    case 4: paso = 6;
+                        break;
+                    case 5: paso--;
+                        break;
+                    case 8: paso = 12;
+                        break;
+                    case 13: paso--;
+                        break;
+                    default: paso++;
+                        break;
+                }
+                break;
+        }
+        avanzar(paso); // Una vez modificada la variable "paso", se ejecuta la función avanzar
+    }
+
+    /**
+     * 
+     * Función "avanzar()"
+     * 
+     * Recibe el valor de una vista cargada
+     * previamente y la muestra al usuario
+     * 
+     * @param {string} Valor -> Recibe como parámetro un 
+     * String, que permite identificar a qué 
+     * vista se dirije el usuario
+     * 
+     * @return void -> No devuelve acción alguna
+     */
+    function avanzar(Valor) {
+        switch (Valor) {
+            case 1:
+                agregarImagen("imagen_vista", link_hall1);
+                agregarBoton("button_view_1", "Cocina", "40%", "45%"); // Botón a
+                agregarBoton("button_view_2", "Hall alcobas", "55%", "65%"); // Botón b
+                break;
+            case 2:
+                agregarImagen("imagen_vista", link_cocina1);
+                agregarBoton("button_view_1", "Hall principal", "50%", "25%"); // Botón a
+                agregarBoton("button_view_2", "Sala y comedor", "70%", "65%"); // Botón b
+                break;
+            case 3:
+                agregarImagen("imagen_vista", link_social1);
+                agregarBoton("button_view_1", "Cocina", "60%", "25%"); // Botón a
+                agregarBoton("button_view_2", "Sala", "60%", "70%"); // Botón b
+                break;
+            case 4:
+                agregarImagen("imagen_vista", link_social2);
+                agregarBoton("button_view_1", "Vista oriental", "60%", "25%"); // Botón a
+                agregarBoton("button_view_2", "Balcón", "50%", "55%"); // Botón b
+                break;
+            case 5:
+                agregarImagen("imagen_vista", link_social3);
+                agregarBoton("button_view_1", "Cocina", "55%", "25%"); // Botón a
+                agregarBoton("button_view_2", "Sala", "65%", "70%"); // Botón b
+                break;
+            case 6:
+                agregarImagen("imagen_vista", link_blc1);
+                agregarBoton("button_view_1", "Sala", "60%", "25%"); // Botón a
+                agregarBoton("button_view_2", "Balcón", "40%", "55%"); // Botón b
+                break;
+            case 7:
+                agregarImagen("imagen_vista", link_blc2);
+                agregarBoton("button_view_1", "Sala", "70%", "70%"); // Botón a
+                ocultarBoton("button_view_2"); // Botón b (Oculto)
+                break;
+            case 8:
+                agregarImagen("imagen_vista", link_hall2);
+                agregarBoton("button_view_1", "Alcoba auxiliar", "50%", "40%"); // Botón a
+                agregarBoton("button_view_2", "Alcoba principal", "50%", "60%"); // Botón b
+                break;
+            case 9:
+                agregarImagen("imagen_vista", link_alc_aux1);
+                agregarBoton("button_view_1", "Baño y clóset", "50%", "30%"); // Botón a
+                ocultarBoton("button_view_2"); // Botón b (Oculto)
+                break;
+            case 10:
+                agregarImagen("imagen_vista", link_alc_aux2);
+                agregarBoton("button_view_1", "Hall alcobas", "60%", "25%"); // Botón a
+                agregarBoton("button_view_2", "Baño", "50%", "60%"); // Botón b
+                break;
+            case 11:
+                agregarImagen("imagen_vista", link_alc_aux3);
+                agregarBoton("button_view_1", "Alcoba", "55%", "25%"); // Botón a
+                ocultarBoton("button_view_2"); // Botón b (Oculto)
+                break;
+            case 12:
+                agregarImagen("imagen_vista", link_alc_prin1);
+                agregarBoton("button_view_1", "Hall alcobas", "65%", "25%"); // Botón a
+                agregarBoton("button_view_2", "Baño y vestier", "60%", "70%"); // Botón b
+                break;
+            case 13:
+                agregarImagen("imagen_vista", link_alc_prin2);
+                agregarBoton("button_view_1", "Baño", "50%", "50%"); // Botón a
+                agregarBoton("button_view_2", "Alcoba", "60%", "70%"); // Botón b
+                break;
+            case 14:
+                agregarImagen("imagen_vista", link_alc_prin3);
+                agregarBoton("button_view_1", "Vestier", "45%", "55%"); // Botón a
+                ocultarBoton("button_view_2"); // Botón b (Oculto)
+                break;
+            default: alert("La opción ingresada es inválida");
+                break;
+        }
+    }
+
+    /**
+     * 
+     * Función "retroceder()"
+     * 
+     * Modifica el valor de la variable "paso" y muestra
+     * al usuario una vista previa
+     * 
+     * @param null -> No recibe parámetro alguno
+     * 
+     * @return void -> No devuelve acción alguna
+     */
+    function retroceder() {
+        if (paso <= 0) {
+            switch (paso) {
+                case 5: paso = 2;
+                    break;
+                case 6: paso = 4;
+                    break;
+                case 8: paso = 1;
+                    break;
+                case 10: paso = 8;
+                    break;
+                case 12: paso = 8;
+                    break;
+                default: paso--;
+                    break;
+            }
+            avanzar(paso);
+        }
+    }
+
+    // Métodos de interacción con el código html
+
+    /**
+     * 
+     * Función "agregarImagen()"
+     * 
+     * Modifica el valor de los atributos "source" (src) 
+     * del elemento especificado
+     * 
+     * @param {string} idImagen -> Recibe como parámetro el
+     * identificador del elemento a modificar
+     * @param {string} SrcImagen -> Recibe como parámetro la 
+     * dirección del recurso a mostrar
+     * 
+     * @return void -> No devuelve acción alguna
+     */
+    function agregarImagen(idImagen, SrcImagen) {
+        document.getElementById(idImagen).setAttribute("src", SrcImagen);
+    }
+
+    /**
+     * 
+     * Función "agregarBoton()"
+     * 
+     * Modifica el valor de los atributos "visibility",
+     * "value", "top" y "left" del elemento especificado
+     * 
+     * @param {string} idBoton -> Recibe como parámetro el
+     * identificador del elemento a modificar
+     * @param {string} valorBoton -> Recibe como parámetro el 
+     * valor que tendrá el elemento
+     * @param {string} altoBoton -> Recibe como parámetro la 
+     * distancia con respecto al borde superior html 
+     * @param {string} anchoDerechaBoton -> Recibe como parámetro la 
+     * distancia con respecto al borde izquierdo html 
+     * 
+     * @return void -> No devuelve acción alguna
+     */
+    function agregarBoton(idBoton, valorBoton, altoBoton, anchoDerechaBoton) {
+        document.getElementById(idBoton).style.visibility = "visible";
+        document.getElementById(idBoton).value = valorBoton;
+        document.getElementById(idBoton).style.top = altoBoton;
+        document.getElementById(idBoton).style.left = anchoDerechaBoton;
+
+    }
+
+    /**
+     * 
+     * Función "ocultarBoton()"
+     * 
+     * Oculta el elemnto especificado
+     * 
+     * @param {string} idBoton -> Recibe como parámetro
+     * el identificador id del elemento
+     * 
+     * @return void -> No devuelve acción alguna
+     */
+    function ocultarBoton(idBoton) {
+        document.getElementById(idBoton).style.visibility = "hidden";
+    }
+
+    /**
+     * 
+     * Función "mostrarBoton()"
+     * 
+     * Muestra el elemnto especificado
+     * 
+     * @param {string} idBoton -> Recibe como parámetro
+     * el identificador id del elemento
+     * 
+     * @return void -> No devuelve acción alguna
+     */
+    function mostrarBoton(idBoton) {
+        document.getElementById(idBoton).style.visibility = "visible";
+    }
+
+</script>
+
+<body>
+    <div id="contenedor_1" class="contenedor">
+        <br>
+
+        <!-- Imagen De fondo -->
+        <img class="imgVista" id="imagen_vista" src="https://cusezar.com/wp-content/uploads/2020/07/1-Fachada-1.jpg">
+
+        <!-- Elementos adicionales (Logo Cusezar, Logo proyecto y botón de contacto Whatsapp)-->
+        <p style="position: absolute;top: 0%;left: 0%;width: 100%;height: 60px;background-color: #e20613;opacity: 50%;">
+        </p>
+        <p
+            style="position: absolute;top: 92%;left: 0%;width: 100%;height: 100px;background-color: #e20613;opacity: 50%;">
+        </p>
+        <a href="https://cusezar.com/proyectos/museo-parque-central/">
+            <img src="https://drive.google.com/uc?export=view&id=16agiFpG3we6tsSvlR0_zI7ATbYIpk_ok"
+                style="position: absolute;top: 4%;left: 21%;width: 13%;height: auto;"></a>
+        <a href="https://cusezar.com/">
+            <img src="https://cusezar.com/wp-content/uploads/2021/04/logo-cusezar.png"
+                style="position: absolute;top: 95%;left: 45%;width: 10%;height: auto;"></a>
+        <a href="https://wa.me/573232728910?text=¡Hola%20Museo%20Parque%20Central!%20Quiero%20conocer%20el%20proyecto">
+            <img src="https://drive.google.com/uc?export=view&id=15b9qPLKbSlKdxaHOiDc34gWojZVKlRci"
+                style="position: absolute;top: 82%;left: 74.5%;width: 5%;height: auto;"></a>
+
+        <!-- Elementos de página -->
+        <input type="button" class="inputLayOut" id="boton_retroceder" onclick="retroceder()"
+            style="top: 10%; left: 74.5%;" value="Volver">
+        <input type="button" class="inputLayOut" id="button_view_1" onclick="interactuar('a')">
+        <input type="button" class="inputLayOut" id="button_view_2" onclick="interactuar('b')">
+        <input type="button" class="inputLayOut" id="boton_inicio" onclick="interactuar('i')"
+            style="top: 60%; left: 48%; visibility: visible;" value="Iniciar">
+    </div>
+</body>
+
+</html>
