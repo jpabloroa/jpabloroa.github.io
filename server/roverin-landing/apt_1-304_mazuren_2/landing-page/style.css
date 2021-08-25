@@ -1,0 +1,179 @@
+/* main */
+
+div.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/**/
+
+/* Container */
+
+img.background-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+div.container {
+    /* Posicionamiento  */
+    position: absolute;
+    top: 7%;
+    left: 15%;
+    /* Dimensión */
+    width: 70%;
+    height: 85%;
+}
+
+/**/
+
+/* Header */
+
+div.header-container {
+    /* Posicionamiento  */
+    position: relative;
+    /* Dimensión */
+    width: 100%;
+    height: 30%;
+    /**/
+}
+
+div.header {
+    /* Posicionamiento  */
+    position: relative;
+    margin: auto;
+    /* Dimensión */
+    width: 80%;
+    height: 100%;
+    /**/
+    /*background: rgba(146, 51, 170, 0.4);*/
+}
+
+img.header-main-photo {
+    /* Posicionamiento  */
+    position: absolute;
+    top: 0%;
+    left: 1%;
+    /* Dimensión */
+    width: 48%;
+    height: 100%;
+    /**/
+    border-radius: 15%;
+}
+
+img.header-upper-photo {
+    /* Posicionamiento  */
+    position: absolute;
+    top: 0%;
+    left: 51%;
+    /* Dimensión */
+    width: 48%;
+    height: 50%;
+    /**/
+    border-radius: 15%;
+}
+
+h1.header-subtitle {
+    /* Posicionamiento  */
+    position: absolute;
+    top: 57%;
+    left: 53%;
+    /* Dimensión */
+    /**/
+    font-size: 2vw;
+    font-family: 'Tahoma';
+    color: black;
+}
+
+h1.header-title {
+    /* Posicionamiento  */
+    position: absolute;
+    top: 60%;
+    left: 53%;
+    /* Dimensión */
+    /**/
+    font-size: 4.5vw;
+    font-family: 'Tahoma';
+    color: black;
+}
+
+/**/
+
+/* Link */
+
+div.link-container {
+    /* Posicionamiento  */
+    position: relative;
+    top: 5%;
+    /* Dimensión */
+    width: 100%;
+    height: 60%;
+    /**/
+}
+
+div.link {
+    /* Posicionamiento  */
+    position: relative;
+    margin: 5% 10%;
+    /* Dimensión */
+    width: 80%;
+    height: 15%;
+    /**/
+    border: 5px solid black;
+    /*background: rgba(146, 51, 170, 0.4);*/
+}
+
+img.link-main-photo {
+    /* Posicionamiento  */
+    position: absolute;
+    top: 17%;
+    left: 10%;
+    /* Dimensión */
+    width: 5vw;
+    height: 5vw;
+    /**/
+    border-radius: 20%;
+}
+
+h1.link-title {
+    /* Posicionamiento  */
+    position: absolute;
+    top: 22%;
+    left: 30%;
+    /* Dimensión */
+    width: 80%;
+    height: auto;
+    /**/
+    font-size: 2vw;
+    font-family: 'Tahoma';
+    color: black;
+}
+
+a.link-link {}
+
+/**/
+
+/* Footer */
+
+div.footer {
+    /* Posicionamiento  */
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0%;
+    /* Dimensión */
+    width: 80%;
+    height: 10%;
+    /**/
+}
+
+img.footer-main-photo {
+    /* Posicionamiento  */
+    position: absolute;
+    left: 27.5%;
+    /* Dimensión */
+    width: auto;
+    height: 150%;
+    /**/
+}
