@@ -1,6 +1,6 @@
 <p>Ver página en Español <a href="https://github.com/jpabloroa/jpabloroa.github.io#leeme">aquí</a></p>
 <hr>
-<h1>Me</h1>
+<h1>About me</h1>
 
 <p>
   I'm Juan Pablo, an economics student and passionate software developer 👨‍💻 with over 1 year of experience developing and implementing web applications.<br>
