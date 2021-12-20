@@ -13,7 +13,7 @@
 
 <p> Habilidades blandas </p>
 <ul>
-  <li> <strong> Comunicación eficaz </strong> </li>
+  <li> <strong> Comunicación eficáz </strong> </li>
   <li> <strong> Empatía </strong> </li>
   <li> <strong> Liderazgo </strong> </li>
   <li> <strong> Responsabilidad </strong> </li>
