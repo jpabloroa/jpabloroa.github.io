@@ -30,13 +30,13 @@
   <li><code>Advanced Java SE & EE programming:</code> Development of complex and extra-efficient web and desktop applications.</li>
   <li><code>Advanced PHP 8.0 programming:</code> Development of complex SPA's - AJAX (Single Page Applications - Asynchronous JavaScript And XML/JSON), PWA's (Progressive Web Applications) and dynamic server-side applications.</li>
   <li><code>Advanced HTML5, CSS3 and JavaScript E6 programming:</code> Development of fast and easy-usable dynamic sites, integrating these 3 languages oriented in the best UX (User eXperience).</li>
-  <li><code>Intermediate Angular 6 - JavaScript framework:</code> Development of SPA's by components with Node JS an Typescript</li>
-  <li><code>Intermediate Laravel 8 - PHP framework:</code> Development of web applications with the las version of Laravel</li>
-  <li><code>Intermediate React 16 - Javascript library:</code> Development of web applications by components with JSX (Embebed HTML on JavaScript)</li>
-  <li><code>Intermidiate SASS - CSS preprocessor:</code> Agile UI (User Interface) development</li>
-  <li><code>Intermidiate Python programming:</code> Development of fast server-side and big-data condensed applications</li>
-  <li><code>Basic Kotlin programming:</code> Development of server-side and medium-small size android applications</li>
-  <li><code>Basic GraphQL programming:</code> Development of request handlers-API oriented in efficiency</li>
+  <li><code>Intermediate Angular 6 - JavaScript framework:</code> Development of SPA's by components with Node JS an Typescript.</li>
+  <li><code>Intermediate Laravel 8 - PHP framework:</code> Development of web applications with the las version of Laravel.</li>
+  <li><code>Intermediate React 16 - Javascript library:</code> Development of web applications by components with JSX (Embebed HTML on JavaScript).</li>
+  <li><code>Intermidiate SASS - CSS preprocessor:</code> Agile UI (User Interface) development.</li>
+  <li><code>Intermidiate Python programming:</code> Development of fast server-side and big-data condensed applications.</li>
+  <li><code>Basic Kotlin programming:</code> Development of server-side and medium-small size android applications.</li>
+  <li><code>Basic GraphQL programming:</code> Development of request handlers-API oriented in efficiency.</li>
 </ul>
 
 <hr>
