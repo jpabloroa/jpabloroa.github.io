@@ -1,4 +1,4 @@
-<p>Ver página en Español <a href="https://github.com/jpabloroa/jpabloroa.github.io#leeme">aquí</a></p>
+<p>Ver página en Español <a href="https://github.com/jpabloroa/jpabloroa.github.io/blob/main/LEEME.md">aquí</a></p>
 <hr>
 <h1>About me</h1>
 
